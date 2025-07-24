@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: nl2sql_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: nl2sql_user
+      POSTGRES_PASSWORD: nl2sql_pass
+      POSTGRES_DB: nl2sql_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql 
+
