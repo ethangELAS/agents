@@ -1,2 +1,0 @@
-# agents
-sql agent, [others]
